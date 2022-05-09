@@ -1,4 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
@@ -27,68 +29,111 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
         >
+
             <TextView
                 android:id="@+id/information"
-                android:text=""
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-            />
+                android:text="" />
         </ScrollView>
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-    >
+        android:layout_height="317dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-        >
+            android:orientation="horizontal">
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/connect_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
                 android:text="Connect Bluetooth"
-            />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="55dp"
+                tools:layout_conversion_absoluteWidth="109dp" />
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/connect_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
                 android:text="Connect Wifi"
-            />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/connect_bluetooth"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="55dp"
+                tools:layout_conversion_absoluteWidth="100dp" />
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/camera_status"
-                android:text="Camera Status"
-            />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/camera_info"
-                android:text="Camera Info"
-            />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/camera_command"
-                android:text="Commands"
-            />
-            <View
-                android:layout_height="10dp"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-            />
-            <ImageButton
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Camera Status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/connect_bluetooth"
+                tools:layout_conversion_absoluteHeight="55dp"
+                tools:layout_conversion_absoluteWidth="94dp" />
+
+            <Button
+                android:id="@+id/camera_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="Camera Info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/camera_status"
+                app:layout_constraintTop_toBottomOf="@+id/connect_wifi"
+                tools:layout_conversion_absoluteHeight="55dp"
+                tools:layout_conversion_absoluteWidth="89dp" />
+
+            <Button
+                android:id="@+id/camera_command"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Commands"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/camera_info"
+                tools:layout_conversion_absoluteHeight="153dp"
+                tools:layout_conversion_absoluteWidth="19dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/information_clear"
+                tools:layout_conversion_absoluteHeight="10dp"
+                tools:layout_conversion_absoluteWidth="0dp" />
+
+            <ImageButton
                 android:id="@+id/information_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:src="@android:drawable/ic_delete"
                 android:text="clear"
-            />
-        </LinearLayout>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/camera_command"
+                tools:layout_conversion_absoluteHeight="51dp"
+                tools:layout_conversion_absoluteWidth="56dp" />
+        </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </LinearLayout>
