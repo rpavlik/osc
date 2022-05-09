@@ -3,6 +3,8 @@
     package="net.karmacoder.osc" >
     <uses-permission android:name="android.permission.BLUETOOTH" android:required="true"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" android:required="true"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" android:required="true"/>
     <uses-permission android:name="android.permission.INTERNET" android:required="true"/>

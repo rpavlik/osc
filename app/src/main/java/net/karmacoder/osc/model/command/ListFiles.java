@@ -108,7 +108,7 @@ public class ListFiles extends Command {
   public enum FileType {
     @Json(name = "image")Image,
     @Json(name = "video")Video,
-    @Json(name = "all")All;
+    @Json(name = "all")All,
   }
 
   public ListFiles() {

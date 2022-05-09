@@ -15,7 +15,8 @@ import java.util.List;
 public class BluetoothScanningAdapter extends RecyclerView.Adapter<BluetoothScanningAdapter.BluetoothDeviceViewHolder> {
   private final LayoutInflater inflater;
   private final Listener listener;
-  private List<BluetoothDevice> list;
+  private final List<BluetoothDevice> list;
+
   public BluetoothScanningAdapter(Context context, Listener listener) {
     super();
 
@@ -56,7 +57,7 @@ public class BluetoothScanningAdapter extends RecyclerView.Adapter<BluetoothScan
                               public void onClick(View view) {
                                 if (listener != null) {
                                   listener.onDeviceClicked(
-                                      list.get(viewHolder.getPosition())
+                                          list.get(viewHolder.getPosition())
                                   );
                                 }
                               }
@@ -72,7 +73,7 @@ public class BluetoothScanningAdapter extends RecyclerView.Adapter<BluetoothScan
   }
 
   public interface Listener {
-    public void onDeviceClicked(BluetoothDevice model);
+    void onDeviceClicked(BluetoothDevice model);
   }
 
   public static class BluetoothDeviceViewHolder extends RecyclerView.ViewHolder {

@@ -53,13 +53,13 @@ public class MainActivity extends Activity {
     }
   };
   private BluetoothAdapter bluetoothAdapter;
-  private Handler handler = new Handler();
+  private final Handler handler = new Handler();
   private final BluetoothGattCallback gattCallback = new BluetoothGattCallback() {
     @Override
     public void onConnectionStateChange(
-        BluetoothGatt gatt,
-        int status,
-        int newState) {
+            BluetoothGatt gatt,
+            int status,
+            int newState) {
       info("Bluetooth Status: " + status + ", new State: " + newState);
       if (newState == BluetoothProfile.STATE_CONNECTED) {
         info("Connected to Bluetooth.");

@@ -56,7 +56,7 @@ public class State {
     @Json(name = "unknown")Unknown,
     @Json(name = "2G")TwoG,
     @Json(name = "3G")ThreeG,
-    @Json(name = "LTE")Lte;
+    @Json(name = "LTE")Lte,
   }
 
   public String fingerprint;
